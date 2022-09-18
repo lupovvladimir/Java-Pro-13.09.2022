@@ -28,4 +28,23 @@ public class Methods {
         scanner = new Scanner(System.in);
         contributionAmount = scanner.nextDouble();
     }
+
+    static void showResult() {
+        doInputs();
+        rateOfInterest = 4.7;
+        DepositForOneYear();
+
+    }
+
+    private static void DepositForOneYear() {
+        term = 365;
+        depositAmount = countDeposit(contributionAmount, rateOfInterest, term);
+        System.out.println("If you open a deposit for one year your deposit amount will be equal to - " + depositAmountRounded + "$ ");
+    }
+
+    static double countDeposit(double contributionAmount, double rateOfInterest, int term) {
+        int amountDaysInYear = 365;
+        int divideBy = 100;
+        return contributionAmount + contributionAmount * rateOfInterest * term / amountDaysInYear / divideBy;
+    }
 }
