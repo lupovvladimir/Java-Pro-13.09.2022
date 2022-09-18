@@ -42,21 +42,21 @@ public class Methods {
         term = 365;
         depositAmount = countDeposit(contributionAmount, rateOfInterest, term);
         depositAmountRounded = roundValue(depositAmount);
-        System.out.println("If you open a deposit for one year, your deposit amount will be equal to - " + depositAmountRounded + "$ ");
+        System.out.println("If you open a deposit for 1 year, your deposit amount will be equal to - " + depositAmountRounded + "$ ");
     }
 
     private static void DepositForFiveYears() {
         term = 365 * 5;
         depositAmount = countDeposit(contributionAmount, rateOfInterest, term);
         depositAmountRounded = roundValue(depositAmount);
-        System.out.println("If you open a deposit for five years, your deposit amount will be equal to - " + depositAmountRounded + "$ ");
+        System.out.println("If you open a deposit for 5 years, your deposit amount will be equal to - " + depositAmountRounded + "$ ");
     }
 
     private static void DepositForTenYears() {
         term = 365 * 10;
         depositAmount = countDeposit(contributionAmount, rateOfInterest, term);
         depositAmountRounded = roundValue(depositAmount);
-        System.out.println("If you open a deposit for ten years, your deposit amount will be equal to - " + depositAmountRounded + "$ ");
+        System.out.println("If you open a deposit for 10 years, your deposit amount will be equal to - " + depositAmountRounded + "$ ");
     }
 
     static double countDeposit(double contributionAmount, double rateOfInterest, int term) {
