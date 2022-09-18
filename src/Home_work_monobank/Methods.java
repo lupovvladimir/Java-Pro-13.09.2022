@@ -1,5 +1,6 @@
 package Home_work_monobank;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Methods {
@@ -40,24 +41,31 @@ public class Methods {
     private static void DepositForOneYear() {
         term = 365;
         depositAmount = countDeposit(contributionAmount, rateOfInterest, term);
-        System.out.println("If you open a deposit for one year your deposit amount will be equal to - " + depositAmountRounded + "$ ");
+        depositAmountRounded = roundValue(depositAmount);
+        System.out.println("If you open a deposit for one year, your deposit amount will be equal to - " + depositAmountRounded + "$ ");
     }
 
     private static void DepositForFiveYears() {
         term = 365 * 5;
         depositAmount = countDeposit(contributionAmount, rateOfInterest, term);
-        System.out.println("If you open a deposit for five years yours deposit amount will be equal to - " + depositAmountRounded + "$ ");
+        depositAmountRounded = roundValue(depositAmount);
+        System.out.println("If you open a deposit for five years, your deposit amount will be equal to - " + depositAmountRounded + "$ ");
     }
 
     private static void DepositForTenYears() {
         term = 365 * 10;
         depositAmount = countDeposit(contributionAmount, rateOfInterest, term);
-        System.out.println("If you open a deposit for ten years yours deposit amount will be equal to - " + depositAmountRounded + "$ ");
+        depositAmountRounded = roundValue(depositAmount);
+        System.out.println("If you open a deposit for ten years, your deposit amount will be equal to - " + depositAmountRounded + "$ ");
     }
 
     static double countDeposit(double contributionAmount, double rateOfInterest, int term) {
         int amountDaysInYear = 365;
         int divideBy = 100;
         return contributionAmount + contributionAmount * rateOfInterest * term / amountDaysInYear / divideBy;
+    }
+
+    public static String roundValue(double value) {
+        return new DecimalFormat("#.00").format(value);
     }
 }
