@@ -10,14 +10,30 @@ public class ConsoleCalculator {
 
     public static void main(String[] args) {
 
+        System.out.println("Task one:");
+        String str = "юукяД ібот ,ежоб ощ я ен !ьлаксом";
+
+        flipString(str);
         calculator();
+
+    }
+
+    private static void flipString(String str) {
+        String[] strArray = str.split(" ");
+        for (int i = 0; i < 7; i++) {
+            char[] s1 = strArray[i].toCharArray();
+            for (int j = s1.length - 1; j >= 0; j--) {
+                System.out.print(s1[j]);
+            }
+            System.out.print(" ");
+        }
 
     }
 
     private static void calculator() {
         System.out.println("\n");
+        System.out.println("Task two:");
         System.out.println("Console calculator with basic functionality greets you !");
-        System.out.println("\n");
         System.out.println("Enter first number:");
         scanner = new Scanner(System.in);
         firstNumber = scanner.nextDouble();
