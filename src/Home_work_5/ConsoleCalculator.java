@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class ConsoleCalculator {
 
     static Scanner scanner;
-    static double firstNumber;
-    static double secondNumber;
+    static double operandOne;
+    static double operandTwo;
 
     public static void main(String[] args) {
 
@@ -36,20 +36,20 @@ public class ConsoleCalculator {
         System.out.println("Console calculator with basic functionality greets you !");
         System.out.println("Enter first number:");
         scanner = new Scanner(System.in);
-        firstNumber = scanner.nextDouble();
+        operandOne = scanner.nextDouble();
 
         System.out.println("Select arithmetic operations (+, -, *, /):");
         char operation = scanner.next().charAt(0);
 
         System.out.println("Enter second number:");
         scanner = new Scanner(System.in);
-        secondNumber = scanner.nextDouble();
+        operandTwo = scanner.nextDouble();
 
         switch (operation) {
-            case '+' -> System.out.println("Result: " + add(firstNumber, secondNumber));
-            case '-' -> System.out.println("Result: " + subtraction(firstNumber, secondNumber));
-            case '*' -> System.out.println("Result: " + multiplication(firstNumber, secondNumber));
-            case '/' -> System.out.println("Result: " + division(firstNumber, secondNumber));
+            case '+' -> System.out.println("Result: " + add(operandOne, operandTwo));
+            case '-' -> System.out.println("Result: " + subtract(operandOne, operandTwo));
+            case '*' -> System.out.println("Result: " + multiply(operandOne, operandTwo));
+            case '/' -> System.out.println("Result: " + divide(operandOne, operandTwo));
             default -> System.out.println("Not a correct character");
         }
 
@@ -70,15 +70,15 @@ public class ConsoleCalculator {
 
     }
 
-    private static double subtraction(double firstNumber, double secondNumber) {
+    private static double subtract(double firstNumber, double secondNumber) {
         return firstNumber - secondNumber;
     }
 
-    private static double multiplication(double firstNumber, double secondNumber) {
+    private static double multiply(double firstNumber, double secondNumber) {
         return firstNumber * secondNumber;
     }
 
-    private static double division(double firstNumber, double secondNumber) {
+    private static double divide(double firstNumber, double secondNumber) {
 
         if (secondNumber == 0) {
             System.out.println("division by '0' is not possible");
