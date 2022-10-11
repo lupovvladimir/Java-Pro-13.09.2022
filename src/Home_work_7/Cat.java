@@ -8,4 +8,5 @@ public class Cat extends Animal {
         super(name, MAX_RUN_LENGTH, MAX_SWIM_LENGTH);
         catsCount++;
     }
+
 }

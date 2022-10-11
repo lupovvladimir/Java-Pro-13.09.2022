@@ -37,5 +37,4 @@ public class Animal {
             System.out.println(this.name + " - swam " + obstacleLength + "m. :>");
         }
     }
-
 }

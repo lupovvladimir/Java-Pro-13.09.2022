@@ -9,4 +9,5 @@ public class Dog extends Animal {
         super(name, MAX_RUN_LENGTH, MAX_SWIM_LENGTH);
         dogsCount++;
     }
+
 }
