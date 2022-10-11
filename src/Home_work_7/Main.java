@@ -1,43 +1,38 @@
 package Home_work_7;
 
 public class Main {
-    public static int dogsCount;
-    public static int catsCount;
-    public static int animalsCount;
 
     public static void main(String[] args) {
-        Dog dog1 = new Dog("Rex");
+        Dog dog1 = new Dog("Rex", 500, 10);
         dog1.run(501);
         dog1.swim(9);
-        dogsCount++;
+
 
         System.out.println("\n");
 
-        Dog dog2 = new Dog("Belka");
+        Dog dog2 = new Dog("Belka", 500, 10);
         dog2.run(415);
         dog2.swim(15);
-        dogsCount++;
+
 
         System.out.println("\n");
 
-        Cat cat1 = new Cat("Felix");
+        Cat cat1 = new Cat("Felix", 200, 0);
         cat1.run(201);
         cat1.swim(1);
-        catsCount++;
+
 
         System.out.println("\n");
 
-        Cat cat2 = new Cat("Barsik");
+        Cat cat2 = new Cat("Barsik", 200, 0);
         cat2.run(150);
-        catsCount++;
 
         System.out.println("\n");
-        animalsCount = dogsCount + catsCount;
 
-        System.out.println("Dogs amount: " + dogsCount);
-        System.out.println("Cats amount: " + catsCount);
-        System.out.println("Animals amount: " + animalsCount);
 
+        System.out.println("Dogs amount: " + Dog.dogsCount);
+        System.out.println("Cats amount: " + Cat.catsCount);
+        System.out.println("Animals amount: " + Animal.animalsCount);
 
     }
 }
